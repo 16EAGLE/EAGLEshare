@@ -65,5 +65,22 @@ test$A
 
 #Testcomment
 
+df <- data.frame(plot="location_name_1",measure1=runif(100)*1000,measure2=round(runif(100)*100),
+                 value=rnorm(100,2,1),ID=rep(LETTERS,100))
+
+head(df)
+
+df_2 <- data.frame(plot="location_name_2",measure1=runif(50)*1000,measure2=round(runif(50)*10),
+                 value=rnorm(50),ID=rep(LETTERS,50))
+df <- rbind(df,df_2)
+
+summary(df)
+str(df)
+head(df)
+mode(df)
+
+df[,c("plot","measure1")]
+
+
 
 
