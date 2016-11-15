@@ -1,6 +1,14 @@
+##################################################################################################################
+####   r_hacks                             #######################################################################
+####   fell free to add some hacks         #######################################################################
+####   date: 15.10.2016                    #######################################################################
+####   R version 3.3.1                     #######################################################################
+##################################################################################################################
+
+
 
 #########################################################################################################################
-#### Load and Install einiger wichtiger Packages  ##################################################################
+#### Load and Install off some important Packages  ######################################################################
 
 loadandinstall <- function(mypkg) {if (!is.element(mypkg,
                                                    installed.packages()[,1])){install.packages(mypkg)}; library(mypkg,
@@ -11,32 +19,35 @@ loadandinstall("raster")
 loadandinstall("rgeos")
 loadandinstall("stringr")
 loadandinstall("car")
-
+loadandinstall("knitr")
+loadandinstall("caret")
+loadandinstall("ggplot2")
+loadandinstall("RStoolbox")  
 
 #########################################################################################################################
-#### Einrichten des Arbeitspfades  ######################################################################################
+#### to set the working directory  ######################################################################################
 
-Drive <- "G:/"
-work_path <- "/R/L_Freytag/"
+Drive <- "Partition:/"           # fore example "C"
+work_path <- "/ordner1/ordner2/"
 setwd(str_c(Drive,work_path))
 
 #########################################################################################################################
-####  display working progress      ##############################################################
+####  display working progress      #####################################################################################
 
-rasterOptions(progress="text")        # Fortschrittsbalken wird angezeigt (einmal zu Beginn anwenden)
+rasterOptions(progress="text")        # progress bar (once at the beginning)
 
-print(i)                              # jedes mal in der Schleife eingeben (i = jeweiliger Laufparameter)
+print(i)                              # progress of the loop; i as an example for the parameter
 
-
-####  öffnen eines neuen Fensters zum Ploten (speichern der Plots in mässiger qualität möglich)  #######################
+#########################################################################################################################
+####  opens new plot window (possibility of saving the Plot in moderate qualiy)  #######################################
 
 x11()
 
 
 #########################################################################################################################
-####  Ersetzen der Dateinpf?de (?ffnen eines Suchfensters)  #############################################################
+####  alternative way of defining the file path (GUI)  ##################################################################
 
-indir <- file.choose()   ### file.choose() anstatt des Pfades
+name <- file.choose()   ### file.choose() anstatt des Pfades
 
 
 #########################################################################################################################
@@ -46,13 +57,13 @@ click()
 zoom()
 
 #########################################################################################################################
-####  schlie?en des Plots
+####  closing the plot
 
 dev.off()
 
 
 #########################################################################################################################
-####  Plotten zweier Raster in einem Fenster mit: ,add=T)  ##############################################################
+####  adding a second raster in the same window  ########################################################################
 
-plot(Muster_Raster,add=T)
+plot(name_of_second_raster,add=T)
 
