@@ -8,7 +8,7 @@ d <- sample(0:50, 60, replace=TRUE)
 d_cut <- cut(d, breaks = c(0,30,60))
 
 
-#2
+#2 #comment
 #with sort() the values within an vector array can be get into a decreasing or increasing order
 d_sort_inc <- sort(d)
 d_sort_dec <- sort(d, decreasing = TRUE)
