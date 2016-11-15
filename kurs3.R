@@ -30,3 +30,4 @@ d_sort_order <- d[d_subs_inc]
 #(25% of the values with increasing order) are situated.
 d_quant <- quantile(d)
 
+#geil alter
