@@ -81,6 +81,16 @@ mode(df)
 
 df[,c("plot","measure1")]
 
+r1 <- raster(nrows=100,ncols=100)
+r1[] <- df$measure2[1:1000]
 
+r2 <- raster(nrows=100,ncols=100)
+r2[] <- df$measure1[1:1000]
+
+r12 <- stack(r1,r2)
+r12$new <- r12[[1]]*r12[[2]]^2
+r12$hans <- rnorm(50,mean=13,sd=19)
+
+r1d <- as.data.frame(r12)
 
 
