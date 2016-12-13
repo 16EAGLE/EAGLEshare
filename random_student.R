@@ -1,6 +1,6 @@
 #Title: random_student
 #Type: function without input
-#Description: Picks randoms student from members list without pickcing same name again afterwards
+#Description: Picks random student from members list without pickcing same name again afterwards
 #Author: Jakob Schwalb-Willmann
 #Date of creation: 13-12-2016
 #License: free for EAGLEs
