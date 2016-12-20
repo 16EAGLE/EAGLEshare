@@ -1,17 +1,16 @@
 #Title: random_student
-#Type: function without input
+#Type: function
 #Description: Picks random student from members list without pickcing same name again afterwards
 #Author: Jakob Schwalb-Willmann
 #Date of creation: 13-12-2016
 #License: free for EAGLEs
 
+#input: string list of students
+#output: selected student
+
 #------------------------------------------------------------------------------------------------
 
-random_student <- function(){
-  #add members here:
-  members <- c("Jakob","Julia","Louis","Johannes","Sebastian","Sarah","Marina","Md","Ahmed","Karsten","Fowad","Kamrul","Pilar")
-  
-  #this part might remain unchanged
+random_student <- function(members){
   max <- length(members)
   check <- FALSE
   if(exists("random_numb_dig") == FALSE){
@@ -41,3 +40,9 @@ random_student <- function(){
     }
   }
 }
+
+#----------------------------------------------------------------------------------------------
+students <- c("Jakob","Julia","Louis","Louis","Louis","Louis","Johannes","Sebastian","Sarah","Marina","Md","Ahmed",
+              "Karsten","Fowad","Kamrul","Pilar","Marcus","Maninder","Barath")
+
+random_student(students)
